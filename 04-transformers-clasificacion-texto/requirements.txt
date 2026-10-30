@@ -1,0 +1,6 @@
+transformers>=4.40
+tokenizers
+torch>=2.1
+safetensors
+scikit-learn  # solo lo usa train.py, para medir accuracy
+huggingface_hub  # para descargar el modelo desde el Hub o publicarlo

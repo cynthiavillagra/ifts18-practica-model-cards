@@ -1,0 +1,6 @@
+torch>=2.1
+safetensors
+numpy
+pandas
+scikit-learn  # solo lo usa train.py, para separar train/test y medir
+huggingface_hub  # para descargar el modelo desde el Hub o publicarlo

@@ -1,0 +1,6 @@
+keras>=3.0
+torch>=2.1  # backend de Keras (alternativa: tensorflow, cambiando KERAS_BACKEND)
+numpy
+pandas
+scikit-learn  # solo lo usa train.py, para separar train/test y medir
+huggingface_hub  # para descargar el modelo desde el Hub o publicarlo

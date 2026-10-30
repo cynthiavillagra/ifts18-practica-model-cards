@@ -1,0 +1,5 @@
+-r 01-sklearn-regresion/requirements.txt
+-r 02-pytorch-regresion/requirements.txt
+-r 03-keras-regresion/requirements.txt
+-r 04-transformers-clasificacion-texto/requirements.txt
+huggingface_hub

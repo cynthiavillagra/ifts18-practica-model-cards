@@ -1,0 +1,5 @@
+scikit-learn>=1.3
+joblib
+pandas
+numpy
+huggingface_hub  # para predict_hub.py

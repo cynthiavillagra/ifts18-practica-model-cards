@@ -1,0 +1,21 @@
+{
+  "arquitectura": "RegresionLineal (torch.nn.Linear)",
+  "entradas": [
+    "m2",
+    "balcon",
+    "ascensor"
+  ],
+  "salida": "precio (miles de US$)",
+  "normalizacion": {
+    "media": [
+      78.51875305175781,
+      0.46875,
+      0.512499988079071
+    ],
+    "desvio": [
+      23.397640228271484,
+      0.4990224838256836,
+      0.4998437762260437
+    ]
+  }
+}

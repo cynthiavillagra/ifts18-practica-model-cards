@@ -1,0 +1,4 @@
+torch>=2.1
+safetensors
+numpy
+huggingface_hub  # para predict_hub.py

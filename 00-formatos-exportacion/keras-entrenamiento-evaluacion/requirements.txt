@@ -1,0 +1,5 @@
+keras>=3.0
+tensorflow  # backend de Keras en estos ejemplos
+pandas
+scikit-learn  # para separar train/test y medir
+huggingface_hub  # para predict_hub.py

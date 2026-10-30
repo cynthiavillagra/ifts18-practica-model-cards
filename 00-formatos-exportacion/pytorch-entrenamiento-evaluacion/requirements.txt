@@ -1,0 +1,6 @@
+torch>=2.1
+safetensors
+pandas
+numpy
+scikit-learn  # para separar train/test y medir
+huggingface_hub  # para predict_hub.py

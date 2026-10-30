@@ -1,0 +1,8 @@
+# Entorno virtual: cada uno lo crea en su PC con crear_entornos.bat (no se sube)
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Claves y tokens: nunca al repo
+.env
