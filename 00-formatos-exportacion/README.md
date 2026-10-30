@@ -27,10 +27,9 @@ Todos los formatos de una misma biblioteca predicen el mismo precio para las tre
 
 ## Subirlas al Hub
 
-Cada carpeta se puede subir tal cual como repositorio de modelo: tiene todo lo que hace falta para cargar el modelo, su Model Card y un `predict_hub.py` que lo baja del Hub y predice. Desde la raíz del repo:
+Cada carpeta se puede subir tal cual como repositorio de modelo: tiene todo lo que hace falta para cargar el modelo, su Model Card y un `predict_hub.py` que lo baja del Hub y predice. Se sube desde la web, como se explica en el README principal. Después, desde la raíz del repo:
 
 ```bash
-python publicar_en_hub.py 00-formatos-exportacion/sklearn-exportar-onnx
 python 00-formatos-exportacion/sklearn-exportar-onnx/predict_hub.py tu-usuario/casas-sklearn-exportar-onnx
 ```
 

@@ -26,7 +26,7 @@ python cargar.py
 
 ## Usar el modelo desde el Hub
 
-Esta carpeta se puede subir tal cual como repositorio de modelo (desde la raíz: `python publicar_en_hub.py 00-formatos-exportacion/sklearn-exportar-onnx`). Después, desde cualquier PC:
+Esta carpeta se puede subir tal cual como repositorio de modelo. Después, desde cualquier PC:
 
 ```bash
 python predict_hub.py tu-usuario/casas-sklearn-exportar-onnx

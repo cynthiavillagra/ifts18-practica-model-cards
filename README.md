@@ -35,11 +35,7 @@ Para que otra persona **use** el modelo, no necesita volver a entrenarlo. Necesi
 
 ## Cómo preparar el entorno y correr un ejemplo
 
-Hay dos formas de hacerlo.
-
-**Un entorno por carpeta.** Cada ejemplo queda con sus propias dependencias, como si fuera un proyecto aparte. En Windows: doble clic en `crear_entornos.bat`. Crea un `.venv` en cada carpeta, instala su `requirements.txt` y prueba `predict.py`. Se puede volver a correr en cualquier PC.
-
-**Un solo entorno para los cuatro.** Desde la carpeta raíz del repositorio, creá un entorno virtual e instalá las dependencias de los cuatro ejemplos:
+Desde la carpeta raíz del repositorio, creá un entorno virtual e instalá las dependencias de los cuatro ejemplos:
 
 ```bash
 python -m venv .venv
@@ -65,29 +61,14 @@ En Google Colab no hace falta el entorno virtual: alcanza con `!pip install -r r
 
 Cada **carpeta** se publica como un repositorio de modelo distinto. Lo que se sube es el contenido de la carpeta, no el repo entero.
 
-### Opción A: desde la web
+Se hace desde la web:
 
 1. Entrar a <https://huggingface.co/new>.
 2. Elegir el nombre del repositorio, por ejemplo `regresion-casas-sklearn`, y si va a ser público o privado.
 3. En **Files and versions → Add file → Upload files**, arrastrar **todos** los archivos de la carpeta, incluido el `README.md`.
 4. Hacer el commit. La pestaña **Model card** muestra el `README.md`, y los metadatos del encabezado YAML aparecen como etiquetas.
 
-### Opción B: con el script `publicar_en_hub.py`
-
-Primero se inicia sesión una vez con un token de **escritura** (<https://huggingface.co/settings/tokens>). Después se corre el script desde la raíz del repo:
-
-```bash
-hf auth login
-python publicar_en_hub.py                        # publica todas las carpetas en tu cuenta
-python publicar_en_hub.py 01-sklearn-regresion   # o solo una
-python publicar_en_hub.py 00-formatos-exportacion/sklearn-exportar-onnx  # o un formato
-```
-
-El script crea un repo de modelo por carpeta, por ejemplo `tu-usuario/regresion-casas-sklearn`. Las carpetas de `00-formatos-exportacion` se publican cada una aparte, por ejemplo `tu-usuario/casas-sklearn-exportar-onnx`. Cada carpeta se sube con `upload_folder`. **Ojo: `upload_folder` no lee el `.gitignore`.** Por eso el script indica en `ignore_patterns` qué no se sube: el `.venv`, `__pycache__` y `.env`. Si no lo hiciera, el entorno virtual entero terminaría en el Hub.
-
-En la opción web pasa lo mismo: hay que arrastrar los archivos **sin** la carpeta `.venv`.
-
-**El token de Hugging Face no se escribe nunca en el código ni se sube a GitHub.** Lo guarda `hf auth login` en tu PC.
+Ojo: hay que arrastrar los archivos **sin** la carpeta `.venv` ni `__pycache__`. Si no, el entorno virtual entero termina en el Hub.
 
 ## Inferir con el modelo publicado
 

@@ -23,7 +23,7 @@ python train.py
 
 ## Usar el modelo desde el Hub
 
-Esta carpeta se puede subir tal cual como repositorio de modelo (desde la raíz: `python publicar_en_hub.py 00-formatos-exportacion/pytorch-entrenamiento-evaluacion`). Después, desde cualquier PC:
+Esta carpeta se puede subir tal cual como repositorio de modelo. Después, desde cualquier PC:
 
 ```bash
 python predict_hub.py tu-usuario/casas-pytorch-entrenamiento-evaluacion
